@@ -15,12 +15,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const publishableKey = process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY || "pk_test_aW5ub2NlbnQtc25pcGUtNDkuY2xlcmsuYWNjb3VudHMuZGV2JA";
+
   return (
     <ClerkProvider
-    appearance={{
-      baseTheme:dark,
-    }}
-  >
+      publishableKey={publishableKey}
+      appearance={{
+        baseTheme:dark,
+      }}
+    >
 
       <html lang="en" suppressHydrationWarning>
         <body
