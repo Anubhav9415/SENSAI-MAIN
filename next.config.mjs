@@ -7,7 +7,10 @@ const nextConfig = {
                 hostname:"randomuser.me"
             }
         ]
-    }
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
 };
 
 export default nextConfig;

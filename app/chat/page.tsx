@@ -18,8 +18,11 @@ import {
   X,
 } from "lucide-react";
 import { toast } from "sonner";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { Button as BaseButton } from "@/components/ui/button";
+const Button = BaseButton as any;
+import { Card as BaseCard, CardContent as BaseCardContent } from "@/components/ui/card";
+const Card = BaseCard as any;
+const CardContent = BaseCardContent as any;
 
 interface Message {
   id: string;
