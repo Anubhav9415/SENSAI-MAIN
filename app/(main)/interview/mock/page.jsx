@@ -24,7 +24,7 @@ const MockInterviewPage = async () => {
 
         <div>
           <h1 className='text-6xl gradient-title font-bold'>Mock Interview</h1>
-          <p className='text-muted-foreground'>Test Your Knowledge with industry-specific question</p>
+          <p className='text-muted-foreground'>Test Your Knowledge with industry-specific questions</p>
         </div>
       </div>
 

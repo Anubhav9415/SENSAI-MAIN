@@ -26,7 +26,7 @@ const CoverLetterGenerator = () => {
     //update content when letter is generated 
     useEffect(() => {
         if (generatedLetter) {
-            toast.success("Cover Letter genrated successfully!")
+            toast.success("Cover Letter generated successfully!")
             router.push(`/ai-cover-letter/${generatedLetter.id}`)
             reset()
         }
@@ -36,7 +36,7 @@ const CoverLetterGenerator = () => {
         try {
             await generateLetterFn(data)
         } catch (error) {
-            toast.error(error.message || "failed to generate cover letter")
+            toast.error(error.message || "Failed to generate cover letter")
         }
 
     }

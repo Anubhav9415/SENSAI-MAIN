@@ -15,7 +15,6 @@ import EntryForm from "./entry-form"
 import { entriesToMarkdown } from "@/app/lib/helper"
 import MDEditor from "@uiw/react-md-editor"
 import { useUser } from "@clerk/nextjs"
-import html2pdf from "html2pdf.js/dist/html2pdf.min.js"
 import { toast } from "sonner"
 
 const ResumeBuilder = ({ initialContent }) => {
@@ -101,6 +100,7 @@ const ResumeBuilder = ({ initialContent }) => {
     const generatePDF = async () => {
         setIsGenertaing(true)
         try {
+            const html2pdf = (await import("html2pdf.js/dist/html2pdf.min.js")).default
             const element = document.getElementById("resume-pdf")
             if (!element) {
                 toast.error("Resume content is not available for export.")

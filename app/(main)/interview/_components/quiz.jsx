@@ -114,10 +114,10 @@ const Quiz = () => {
         return (
             <Card className="mx-2">
                 <CardHeader>
-                    <CardTitle>Ready to test your Knowledge? </CardTitle>
+                    <CardTitle>Ready to Test Your Knowledge?</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    <p className="text-muted-foreground">This quiz contain 10 question specific to your indsutry and skills.Take you time and choose the best answer for each question</p>
+                    <p className="text-muted-foreground">This quiz contains 10 questions specific to your industry and skills. Take your time and choose the best answer for each question.</p>
                 </CardContent>
                 <CardFooter>
                     <Button className="w-full"

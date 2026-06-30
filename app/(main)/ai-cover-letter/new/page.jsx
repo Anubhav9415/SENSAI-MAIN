@@ -18,13 +18,13 @@ const NewCoverLetterPage = async () => {
             <Link href="/ai-cover-letter">
             <Button variant="link" className="gap-2 pl-0">
                 <ArrowLeft className='h-4 w-4'/>
-                Back to Cover letters
+                Back to Cover Letters
             </Button>
             </Link>
 
             <div className='pb-6'>
                 <h1 className='text-6xl font-bold gradient-title'>
-                Create Cover letter
+                Create Cover Letter
                 </h1>
                 <p className=' text-muted-foreground'>
                     Generate a tailored cover letter for your dream job.

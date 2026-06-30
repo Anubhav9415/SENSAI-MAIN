@@ -38,15 +38,21 @@ export const generateAIInsights=async(industry)=>{
     const text=response.text()
 
     //to clean the text 
-    const cleanedText= text.replace(/```(?:json)?\n?/g,"").trim();
+    const cleanedText = text.replace(/```(?:json)?\n?/g, "").trim();
+    const jsonStart = cleanedText.indexOf("{");
+    const jsonEnd = cleanedText.lastIndexOf("}");
+    let jsonToParse = cleanedText;
+    if (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart) {
+        jsonToParse = cleanedText.substring(jsonStart, jsonEnd + 1);
+    }
 
     //now parse it 
-    return JSON.parse(cleanedText);
+    return JSON.parse(jsonToParse);
 }
 
 
 
-export async function getIndusrtyInsights() {
+export async function getIndustryInsights() {
     const { userId } = await auth();
     if (!userId) throw new Error("Unauthorized")
 

@@ -7,7 +7,7 @@ import { Brain, BriefcaseIcon, LineChart, TrendingDown, TrendingUp } from 'lucid
 import React from 'react'
 import { Bar, BarChart, CartesianGrid, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
 
-const DahboardView = ({ insights }) => {
+const DashboardView = ({ insights }) => {
 
     //structre the data so that rechart can easliy render
     const salaryData = insights.salaryRanges.map((range) => ({
@@ -75,7 +75,7 @@ const DahboardView = ({ insights }) => {
                     </CardHeader>
                     <CardContent>
                         <div className='text-2xl font-bold'>{insights.marketOutlook}</div>
-                        <p className='text-xs text-muted-foreground'>NexUpdate {nextUpdateDistance}</p>
+                        <p className='text-xs text-muted-foreground'>Next Update {nextUpdateDistance}</p>
                     </CardContent>
                 </Card>
 
@@ -127,7 +127,7 @@ const DahboardView = ({ insights }) => {
                 <CardHeader >
                     <CardTitle >Salary Ranges by Role</CardTitle>
                     <CardDescription>
-                        Displayig minimum,median,and maximum salaries (in thousand)
+                        Displaying minimum, median, and maximum salaries (in thousands)
                     </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -192,7 +192,7 @@ const DahboardView = ({ insights }) => {
                     <CardHeader >
                         <CardTitle>Recommended Skills</CardTitle>
                         <CardDescription>
-                            Skill to consider Developing.
+                            Skills to consider developing.
                         </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -211,4 +211,4 @@ const DahboardView = ({ insights }) => {
     )
 }
 
-export default DahboardView
+export default DashboardView

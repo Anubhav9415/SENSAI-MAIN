@@ -58,12 +58,18 @@ export async function generateQuiz() {
 
         //clean the response
         const cleanedText = text.replace(/```(?:json)?\n?/g, "").trim();
-        const quiz = JSON.parse(cleanedText)
+        const jsonStart = cleanedText.indexOf("{");
+        const jsonEnd = cleanedText.lastIndexOf("}");
+        let jsonToParse = cleanedText;
+        if (jsonStart !== -1 && jsonEnd !== -1 && jsonEnd > jsonStart) {
+            jsonToParse = cleanedText.substring(jsonStart, jsonEnd + 1);
+        }
+        const quiz = JSON.parse(jsonToParse);
 
         return quiz.questions;
     } catch (error) {
         console.error("Error Generating Quiz", error)
-        throw new Error("failed to generate Quiz questions")
+        throw new Error("Failed to generate quiz questions")
     }
 
 }
@@ -144,7 +150,7 @@ export async function saveQuizResult(questions, answers, score) {
         return assessment;
     } catch (error) {
         console.error("Error saving Quiz result",error)
-        throw new Error("failed to save result")
+        throw new Error("Failed to save quiz result")
     }
 }
 
@@ -174,7 +180,7 @@ export async function getAssessments(){
         return assessments
     } catch (error) {
         console.error("Error while fetching the assessments")
-        throw new Error("Failed to fetch assessment")
+        throw new Error("Failed to fetch assessments")
         
     }
 }

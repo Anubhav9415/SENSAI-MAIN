@@ -30,13 +30,12 @@ const HeroSection = () => {
                 <div className='space-y-6 mx-auto'>
                     <h1 className=' text-5xl font-bold md:text-6xl lg:text-7xl xl:text-8xl
                     gradient-title'>
-                        Your AI Carrer Coach for
+                        Your AI Career Coach for{" "}
                         <br />
                         Professional Success
                     </h1>
                     <p className='mx-auto max-w-[600px] text-muted-foreground md:text-xl'>
-                        Advance your carrer with personlized guidance ,interview prep,and
-                        AI-powered
+                        Advance your career with personalized guidance, interview prep, and AI-powered tools.
                     </p>
                 </div>
 
@@ -44,7 +43,7 @@ const HeroSection = () => {
                     <Link href="/dashboard" >
                         <Button size='lg' className='px-8'>Get Started</Button>
                     </Link>
-                    <Link href="https://www.gooogle.com" >
+                    <Link href="https://www.google.com" >
                         <Button size='lg' className='px-8' variant='outline'>Watch Demo</Button>
                     </Link>
                 </div>

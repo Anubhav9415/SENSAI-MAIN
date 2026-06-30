@@ -17,12 +17,12 @@ const QuizList = ({ assessments }) => {
       <Card>
         <CardHeader className="flex flex-row items-center justify-between">
           <div>
-            <CardTitle className="gradient-title text-3xl md:text-4xl">Recent Quiz</CardTitle>
+            <CardTitle className="gradient-title text-3xl md:text-4xl">Recent Quizzes</CardTitle>
             <CardDescription>Review your past quiz performance</CardDescription>
           </div>
           <Button
             onClick={() => router.push("/interview/mock")}
-          >Start new Quiz</Button>
+          >Start New Quiz</Button>
         </CardHeader>
         <CardContent>
           <div className='space-y-4'>
@@ -39,7 +39,7 @@ const QuizList = ({ assessments }) => {
                         Score: {assessment.quizScore.toFixed(1)}%
                       </div>
                       <div>
-                        {format(new Date(assessment.createdAt), "MMMM dd,yyyy HH:mm")}
+                        {format(new Date(assessment.createdAt), "MMMM dd, yyyy HH:mm")}
                       </div>
                     </CardDescription>
                   </CardHeader>
